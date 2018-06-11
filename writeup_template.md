@@ -1,8 +1,4 @@
 ## Project: 3D Motion Planning
-![Quad Image](./misc/enroute.png)
-
----
-
 
 # Required Steps for a Passing Submission:
 1. Load the 2.5D map in the colliders.csv file describing the environment.
@@ -142,13 +138,5 @@ Note that it relies on a boolean function call with epsilon as a threshold, whic
 ### Execute the flight
 #### 1. Does it work?
 It works wonderfully!
-
-
-
-### Double check that you've met specifications for each of the [rubric](https://review.udacity.com/#!/rubrics/1534/view) points.
-  
-# Extra Challenges: Real World Planning
-
-The extra challenges sound like fun, but I am running a bit behind in my project submissions.
 
 
