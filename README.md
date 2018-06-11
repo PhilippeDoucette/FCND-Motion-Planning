@@ -18,8 +18,10 @@
  create_grid: Returns the grid used by a_star for a given altitude and safety distance.
  
 ***motion_planning*** includes:
- Three callbacks for local position, velocity and state, which provide the events which trigger the transition routines
- Six transitions, arming, takeoff, waypoint, landing disarming, and manual, which advance the vehicle state and run the appropriate methods in the underlying Drone class, such as arm(), takeoff(), etc.
+ Three callbacks for local position, velocity and state, which provide the events which trigger the transition routines.
+ 
+ Six transitions, arming, takeoff, waypoint, landing, disarming, and manual, which advance the vehicle state and run the appropriate methods in the underlying Drone class, such as arm(), takeoff(), etc.
+ 
  plan_path, which is called right after arming, calculates the set of waypoints, by using the a_star path planning
  
  
