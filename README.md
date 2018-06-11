@@ -70,6 +70,7 @@ I modified the enum class Action to include diagonal moves and their costs
       EAST = (0, 1, 1)
       NORTH = (-1, 0, 1)
       SOUTH = (1, 0, 1)
+      
       NORTHEAST = (-1, 1, 1.41)
       SOUTHEAST = (1, 1, 1.41)
       NORTHWEST = (-1, -1, 1.41)
@@ -79,8 +80,7 @@ I modified the enum class Action to include diagonal moves and their costs
 
 It was also necessary to modify valid_actions to check grid bondaries and obstacle collisions for diagonal moves
 
-def valid_actions(grid, current_node):
-
+ def valid_actions(grid, current_node):
     valid_actions = list(Action)
     n, m = grid.shape[0] - 1, grid.shape[1] - 1
     x, y = current_node
