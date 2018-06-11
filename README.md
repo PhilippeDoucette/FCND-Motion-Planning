@@ -97,14 +97,14 @@ It was also necessary to modify valid_actions to check grid bondaries and obstac
       if y + 1 > m or grid[x, y + 1] == 1:
         valid_actions.remove(Action.EAST)
 
-    if x - 1 < 0 or y + 1 > m or grid[x - 1, y + 1] == 1:
-        valid_actions.remove(Action.NORTHEAST)
-    if x + 1 > n or y + 1 > m or grid[x + 1, y + 1] == 1:
-        valid_actions.remove(Action.SOUTHEAST)
-    if x - 1 < 0 or y - 1 < 0 or grid[x - 1, y - 1] == 1:
-        valid_actions.remove(Action.NORTHWEST)
-    if x + 1 > n or y - 1 < 0 or grid[x + 1, y - 1] == 1:
-        valid_actions.remove(Action.SOUTHWEST)
+      if x - 1 < 0 or y + 1 > m or grid[x - 1, y + 1] == 1:
+          valid_actions.remove(Action.NORTHEAST)
+      if x + 1 > n or y + 1 > m or grid[x + 1, y + 1] == 1:
+          valid_actions.remove(Action.SOUTHEAST)
+      if x - 1 < 0 or y - 1 < 0 or grid[x - 1, y - 1] == 1:
+          valid_actions.remove(Action.NORTHWEST)
+      if x + 1 > n or y - 1 < 0 or grid[x + 1, y - 1] == 1:
+          valid_actions.remove(Action.SOUTHWEST)
     return valid_actions
 
 #### 6. Cull waypoints 
