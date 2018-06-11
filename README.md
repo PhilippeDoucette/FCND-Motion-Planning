@@ -51,7 +51,7 @@ With the global home position set, I used it to set the local position so that I
         grid_start = (int(local_pos[0])-north_offset, int(local_pos[1])-east_offset)
 
 #### 4. Set grid goal position from geodetic coords
-It is easiler to supply lat-lon positions from the sumulator as goal positions.  We can then fly around manually to an interesting spot, record the lat-lon, and fly back there later. I created a list I can un-comment to fly to a location.  This also works with Google Maps by specifying a lat-lon
+It is easiler to supply lat-lon positions from the simulator as goal positions.  We can then fly around manually to an interesting spot, record the lat-lon, and fly back there later. I created a list I can un-comment to fly to a location.  This also works with Google Maps by specifying a lat-lon
 
         # global_goal - np.array([-122.395606, 37.793719, 5])
         # global_goal = np.array([-122.395216, 37.795063, 5]) # Justin Herman Plaza
