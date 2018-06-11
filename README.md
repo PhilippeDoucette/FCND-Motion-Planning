@@ -7,15 +7,22 @@
 #### 1. Explain the functionality of what's provided in `motion_planning.py` and `planning_utils.py`
 ***planning_Utils*** includes: 
 
-    a_star: the path plannng routine that takes a grid, heuristic, and start/end points and returns a path through the obstacles defined in the grid.
+ a_star: the path plannng routine that takes a grid, heuristic, and start/end points and returns a path through the obstacles defined in the grid.
   
-    heuristic: A frobenius norm for the distance between the current point and the goal.
+ heuristic: A frobenius norm for the distance between the current point and the goal.
   
-    Enum Action: comprised of valid moves within the grid.  I expanded the four directions to include compass diagonals.
+ Enum Action: comprised of valid moves within the grid.  I expanded the four directions to include compass diagonals.
   
-    valid_actions: Returns a list of valid actions for the current node.  I expanded this to include compass diagonals.
+ valid_actions: Returns a list of valid actions for the current node.  I expanded this to include compass diagonals.
   
-    create_grid: Returns the grid used by a_star for a given altitude and safety distance.
+ create_grid: Returns the grid used by a_star for a given altitude and safety distance.
+ 
+***motion_planning*** includes:
+ Three callbacks for local position, velocity and state, which provide the events wich trigger the transition routines
+ Six transitions, arming, takeoff, waypoint, landing disarming, and manual, wich advance the vehicle state and run the appropriate methods in the underlying Drone class, such as arm(), takeoff(), etc.
+ plan_path, which is called right after arming, calculates the set of waypoints, by using the a_star path planning
+ 
+ 
 
 ### Implementing Your Path Planning Algorithm
 
