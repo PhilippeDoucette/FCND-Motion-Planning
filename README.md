@@ -80,21 +80,21 @@ I modified the enum class Action to include diagonal moves and their costs
 
 It was also necessary to modify valid_actions to check grid bondaries and obstacle collisions for diagonal moves
 
- def valid_actions(grid, current_node):
-    valid_actions = list(Action)
-    n, m = grid.shape[0] - 1, grid.shape[1] - 1
-    x, y = current_node
+    def valid_actions(grid, current_node):
+      valid_actions = list(Action)
+      n, m = grid.shape[0] - 1, grid.shape[1] - 1
+      x, y = current_node
 
-    # check if the node is off the grid or
-    # it's an obstacle
+      # check if the node is off the grid or
+      # it's an obstacle
 
-    if x - 1 < 0 or grid[x - 1, y] == 1:
+      if x - 1 < 0 or grid[x - 1, y] == 1:
         valid_actions.remove(Action.NORTH)
-    if x + 1 > n or grid[x + 1, y] == 1:
+      if x + 1 > n or grid[x + 1, y] == 1:
         valid_actions.remove(Action.SOUTH)
-    if y - 1 < 0 or grid[x, y - 1] == 1:
-        valid_actions.remove(Action.WEST)
-    if y + 1 > m or grid[x, y + 1] == 1:
+      if y - 1 < 0 or grid[x, y - 1] == 1:
+          valid_actions.remove(Action.WEST)
+      if y + 1 > m or grid[x, y + 1] == 1:
         valid_actions.remove(Action.EAST)
 
     if x - 1 < 0 or y + 1 > m or grid[x - 1, y + 1] == 1:
