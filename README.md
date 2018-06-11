@@ -50,8 +50,11 @@ It is easiler to supply lat-lon positions from the sumulator as goal positions. 
 
 #### 5. Modify A* to include diagonal motion (or replace A* altogether)
 I modified the enum class Action to include diagonal moves and their costs
+  
+  class Action(Enum):
+    """
+    An action is represented by a 3 element tuple.
 
-class Action(Enum):
     WEST = (0, -1, 1)
     EAST = (0, 1, 1)
     NORTH = (-1, 0, 1)
@@ -60,7 +63,8 @@ class Action(Enum):
     SOUTHEAST = (1, 1, 1.41)
     NORTHWEST = (-1, -1, 1.41)
     SOUTHWEST = (1, -1, 1.41)
-  ...
+    
+    ... 
 
 It was also necessary to modify valid_actions to check grid bondaries and obstacle collisions for diagonal moves
 
