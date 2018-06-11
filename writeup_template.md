@@ -143,6 +143,8 @@ Note that it relies on a boolean function call with epsilon as a threshold, whic
 #### 1. Does it work?
 It works wonderfully!
 
+
+
 ### Double check that you've met specifications for each of the [rubric](https://review.udacity.com/#!/rubrics/1534/view) points.
   
 # Extra Challenges: Real World Planning
